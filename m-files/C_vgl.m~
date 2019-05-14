@@ -26,9 +26,9 @@ plot(c_phi,'b-'); hold on; plot(c_phi_ext,'r-'); xlabel('Time'); ylabel('Phase')
 yyaxis right
 plot(c_omegas,'g-'); ylabel('Frequency'); set(gca,'YColor','g')
 %%
-c_phi_ext = table2array(importfile('/Users/ju/Documents/Animation/firefly stuff/c-files/test/phi_ext.txt'));
-c_phi = table2array(importfile('/Users/ju/Documents/Animation/firefly stuff/c-files/test/phi.txt'));
-c_omegas = table2array(importfile('/Users/ju/Documents/Animation/firefly stuff/c-files/test/omegas.txt'));
+c_phi_ext = table2array(importfile('../c-files/CF/phi_ext.txt'));
+c_phi = table2array(importfile('../c-files/CF/phi.txt'));
+c_omegas = table2array(importfile('../c-files/CF/omegas.txt'));
 
 
 figure(3)
@@ -37,3 +37,4 @@ yyaxis left
 plot(c_phi,'b-'); hold on; plot(c_phi_ext,'r-'); xlabel('Time'); ylabel('Phase'); set(gca,'YColor','k')
 yyaxis right
 plot(c_omegas,'g-'); ylabel('Frequency'); set(gca,'YColor','g')
+
