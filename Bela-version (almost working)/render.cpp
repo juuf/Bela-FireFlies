@@ -94,9 +94,10 @@ std::vector<double> E={1};
 std::vector<double> C={1};
 std::vector<double> domega(2,0);
 int fire = 0;
-
+int pe_bin;
+//int p_bin;
 int simlength = 8e4;
-int sr =1e3;
+int sr =1e4;
 
 //srand(2345);
 // ((double) rand() / (RAND_MAX))
@@ -972,7 +973,8 @@ void render(BelaContext *context, void *userData)
         
         
         //std::vector<double> omegas;
-        //std::vector<double> phase;
+//        std::vector<double> phase;
+        double phase_
         
         //    std::vector<double> temp2;
         ////    for (int k_=0; k_ <= 1; k_++){
@@ -1000,7 +1002,9 @@ void render(BelaContext *context, void *userData)
             count_=false;  // only once
         }
         
-        // phase.push_back(pas_phi);
+//        phase.push_back(pas_phi);
+//        phase.push_back(pas_phi);
+
         //omegas.push_back(omega);
         
         
@@ -1017,7 +1021,8 @@ void render(BelaContext *context, void *userData)
             //              std::cout << f;
             phi_ext.push_back(0);
         }
-        // phase.push_back(fireflySimulation(f,sr));
+//        phase.push_back(fireflySimulation(f,sr));
+         fireflySimulation(f,sr);
         //   omegas.push_back(omega);
         //}
         //        //libpd_bang("foo");
@@ -1025,11 +1030,23 @@ void render(BelaContext *context, void *userData)
         //        //libpd_start_message(1);
         //        //libpd_add_float(1);
         //        //libpd_finish_list("test");
+        if (phi_ext[phi_ext.size()-1]==1){
+            pe_bin=1;
+        }
+        else{
+            pe_bin=0;
+        }
         
         libpd_start_message(1);
-        libpd_add_float(phi_ext[phi_ext.size()-1]);
-        //libpd_add_float(0);
-        libpd_finish_list("test");
+        // libpd_add_float(phi_ext[phi_ext.size()-1]);
+        libpd_add_float(pe_bin);
+        libpd_finish_list("phi_ext");
+        
+        libpd_start_message(1);
+        // libpd_add_float(phi_ext[phi_ext.size()-1]);
+        libpd_add_float(pas_phi);
+        libpd_finish_list("phi");
+        
         
         
         // audio output
