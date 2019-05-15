@@ -3,4 +3,4 @@
 - For now, an interal firefly/signal "phi" synchronises to an external signal "phi_ext" (cannot adapt),
 such that the internal signal adpats its frequency to the external fixed frequency. Therefore, as a first step 
 this setup can be used without the need of an external audio input from the microphone.
-- optimise function call "fireflySimulation" such that the memory is not overloaded 
+- optimise function call "fireflySimulation" such that the memory will not get overloaded at some point 
