@@ -973,8 +973,8 @@ void render(BelaContext *context, void *userData)
         
         
         //std::vector<double> omegas;
-//        std::vector<double> phase;
-        double phase_
+               std::vector<double> phase;
+        //double phase_;
         
         //    std::vector<double> temp2;
         ////    for (int k_=0; k_ <= 1; k_++){
@@ -1002,9 +1002,9 @@ void render(BelaContext *context, void *userData)
             count_=false;  // only once
         }
         
-//        phase.push_back(pas_phi);
-//        phase.push_back(pas_phi);
-
+        //        phase.push_back(pas_phi);
+               phase.push_back(pas_phi);
+        
         //omegas.push_back(omega);
         
         
@@ -1021,8 +1021,8 @@ void render(BelaContext *context, void *userData)
             //              std::cout << f;
             phi_ext.push_back(0);
         }
-//        phase.push_back(fireflySimulation(f,sr));
-         fireflySimulation(f,sr);
+                phase.push_back(fireflySimulation(f,sr));
+        //fireflySimulation(f,sr);
         //   omegas.push_back(omega);
         //}
         //        //libpd_bang("foo");
