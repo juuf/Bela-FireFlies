@@ -1,0 +1,5 @@
+- decide which value to send to PD in order to elicit a tone. 
+- Baudio input from the microphone needs to be implemented (i.e. similar to a bonk in pd or data send to render.cpp from pd).
+- For now, an interal firefly/signal "phi" synchronises to an external signal "phi_ext" (cannot adapt),
+such that the internal signal adpats its frequency to the external fixed frequency. Therefore, as a first step 
+this setup can be used without the need of an external audio input from the microphone.
