@@ -95,7 +95,7 @@ std::vector<double> C={1};
 std::vector<double> domega(2,0);
 int fire = 0;
 int pe_bin;
-//int p_bin;
+int p_bin;
 int simlength = 8e4;
 int sr =1e4;
 
@@ -1036,15 +1036,21 @@ void render(BelaContext *context, void *userData)
         else{
             pe_bin=0;
         }
+        if (pas_phi==1){
+            p_bin=1;
+        }
+        else{
+            p_bin=0;
+        }
         
         libpd_start_message(1);
-        // libpd_add_float(phi_ext[phi_ext.size()-1]);
+        // libpd_add_float(phi_ext[p hi_ext.size()-1]);
         libpd_add_float(pe_bin);
         libpd_finish_list("phi_ext");
         
         libpd_start_message(1);
         // libpd_add_float(phi_ext[phi_ext.size()-1]);
-        libpd_add_float(pas_phi);
+        libpd_add_float(p_bin);
         libpd_finish_list("phi");
         
         
