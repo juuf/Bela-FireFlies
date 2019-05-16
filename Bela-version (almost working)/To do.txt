@@ -4,4 +4,6 @@
 such that the internal signal adpats its frequency to the external fixed frequency. Therefore, as a first step 
 this setup can be used without the need of an external audio input from the microphone.
 - optimise function call "fireflySimulation" such that the memory will not get overloaded at some point 
-- make auxiliaryTask if necessary 
+- make <a https://code.soundsoftware.ac.uk/projects/beaglert/embedded/group__auxtask.html="url">auxiliaryTask</a> if necessary 
+
+
